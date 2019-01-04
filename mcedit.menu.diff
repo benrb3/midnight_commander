@@ -1,0 +1,14 @@
+--- mcedit.menu.orig	2018-06-03 14:11:02.000000000 -0400
++++ mcedit.menu	2019-01-02 22:07:39.203201812 -0500
+@@ -480,4 +480,11 @@
+         sed 's/\(.*\)/\L\1/' $TMPFILE >%b
+         rm -f $TMPFILE
+ 
+++ t r
++C       Comment highlighted lines with a leading #
++        TMPFILE=$(mktemp ${MC_TMPDIR:-/tmp}/up.XXXXXX) || exit 1
++        cat %b > $TMPFILE
++        sed 's/^/#/' $TMPFILE > %b
++        rm -f $TMPFILE
++
+ #-------------------------- End of common section -----------------------------
