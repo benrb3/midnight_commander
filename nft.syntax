@@ -1,0 +1,24 @@
+# Syntax rules for nftables configuration files
+
+context default
+    keyword whole flush red
+    keyword whole drop red
+    keyword whole table green
+    keyword whole chain green
+    keyword whole type green
+    keyword whole hook green
+    keyword whole priority green
+    keyword whole policy green
+    keyword whole ruleset yellow
+    keyword whole set yellow
+    keyword whole accept blue
+    keyword whole ip yellow
+    keyword whole ip6 yellow
+    keyword whole tcp brightcyan
+    keyword whole udp brightcyan
+    keyword { gray
+    keyword } gray
+    keyword wholeright @+ magenta
+    keyword whole linestart \{\s\t\}\[\s\t\]#*\n brown
+
+context linestart # \n brown

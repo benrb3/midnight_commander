@@ -1,0 +1,15 @@
+--- Syntax.orig	2018-06-03 14:11:02.000000000 -0400
++++ Syntax	2019-01-03 16:51:03.274131246 -0500
+@@ -295,5 +295,12 @@
+ file ..\*\\.proto$ Protobuf\sFile
+ include protobuf.syntax
+ 
++file nftables\.(nft|conf)$ nftables\sConfiguration\sFile
++include nft.syntax
++
++file ..\*\\.ino$ Arduino\sProgram
++include c.syntax
++
++# The next entry for 'unknown' file type needs to be last
+ file .\* unknown
+ include unknown.syntax
